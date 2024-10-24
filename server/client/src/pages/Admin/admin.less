@@ -1,0 +1,525 @@
+@import '../../globalStyling/variables.less';
+@import '../../globalStyling/components.less';
+
+.admin-panel {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+    .sidebar {
+        padding: 12.8rem 0;
+        border-right: solid 0.1rem @primary-800;
+        background-color: @primary-100;
+
+        position: sticky;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        overflow: auto;
+        z-index: 10;
+
+        .sidebar-textbox {
+            // background-color: aqua;
+            padding: 0 2.4rem;
+            margin-bottom: 4.8rem;
+
+            .sidebar-title {
+                color: @primary-1200;
+                margin-bottom: 1.6rem;
+                border-bottom: solid 0.1rem @primary-1200;
+                padding-bottom: 0.4rem;
+            }
+
+            .sidebar-text {
+                font-size: 1.6rem;
+                line-height: 2rem;
+                color: @neutral-900;
+            }
+        }
+
+        .sidebar-navigation {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 6.4rem;
+
+            .sidebar-link {
+                font-size: 1.6rem;
+                font-weight: bold;
+                color: @primary-1200;
+                text-decoration: none;
+                padding: 1.6rem 3.2rem;
+                transition: .2s;
+
+                &:hover {
+                    background-color: @primary-800;
+                    color: @primary-100;
+                }
+
+                &.active {
+                    background-color: @primary-1600;
+                    color: @primary-100;
+                }
+            }
+        }
+
+        .sidebar-btn-box {
+            padding: 0 2.4rem;
+            width: 100%;
+
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+
+    .sidebar-icon {
+        position: fixed;
+        top: 50vh;
+        transform: translateY(50%);
+        display: none;
+        z-index: 11;
+
+        width: 3.2rem;
+        height: 3.2rem;
+        color: @primary-800;
+        border-radius: 100%;
+
+        &.open {
+            left: 0;
+        }
+
+        &.close {
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: @primary-100;
+        }
+    }
+
+    .section-data {
+        padding: 12.8rem 6.4rem;
+
+        .biography-card {
+            .card(@primary-100, @primary-800, @primary-1200, @neutral-900);
+            width: 100%;
+            padding: 3.2rem;
+
+            .btn-box {
+                display: flex;
+                gap: 2.4rem;
+                justify-content: end;
+            }
+
+            .biography-title {
+                width: 100%;
+                color: @primary-1200;
+                border-bottom: solid 0.1rem @primary-900;
+                padding: 0.8rem;
+                margin-bottom: 3.2rem;
+            }
+
+            .admin-input-container {
+                display: flex;
+                gap: 2.4rem;
+                margin-bottom: 4.8rem;
+
+                .admin-contact {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.8rem;
+                    border: solid 0.1rem @primary-1200;
+                    border-radius: 1rem;
+                    padding: 0.8rem 1.6rem;
+                    width: 50%;
+
+                    .admin-contact-icon {
+                        .title();
+                        width: 4.8rem;
+                        height: 4.8rem;
+                    }
+
+                    .admin-contact-content {
+                        font-size: 1.6rem;
+                        color: @neutral;
+                    }
+                }
+            }
+
+            .specialities-container {
+                margin-bottom: 4.8rem;
+
+                .specialities {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.6rem;
+
+                    .speciality-container {
+                        font-size: 1.6rem;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0 1.6rem;
+
+                        .specialty-input {
+                            background-color: transparent;
+                            font-family: inherit;
+                            font-size: inherit;
+                            border: none;
+                            color: @primary-1200;
+                            border-bottom: solid 0.1rem @primary-1200;
+                            flex-grow: 1;
+                            padding-bottom: 0.8rem;
+                        }
+
+                        .speciality-icon {
+                            width: 1.6rem;
+                            height: 1.6rem;
+                            cursor: pointer;
+                            transition: .2s;
+
+                            &:hover {
+                                .title();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .services-page {
+        padding: 12.8rem 6.4rem;
+
+        .section-services, .section-pricing {
+            padding: 0;
+            display: block;
+            margin-bottom: 9.6rem;
+
+            .service-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2.4rem;
+                padding: 0 1.2rem;
+                margin-bottom: 3.2rem;
+
+                .service-card, .pricing-card {
+                    position: relative;
+
+                    .service-icon {
+                        position: absolute;
+
+                        top: 1.2rem;
+                        right: 1.2rem;
+
+                        width: 1.6rem;
+                        height: 1.6rem;
+
+                        cursor: pointer;
+                        transition: .2s;
+
+                        // &:hover {
+                        //     .title();
+                        // }
+                    }
+
+                    .service-input {
+                        background-color: transparent;
+                        border: none;
+                        text-align: center;
+                        resize: none;
+                        width: 100%;
+                    }
+                    
+                    .service-title {
+                        font-size: var(--h3);
+                        font-family: @font-secondary;
+                        .service-input();
+                    }
+
+                    .pricing-title {
+                        font-size: var(--h4);
+                        font-family: @font-secondary;
+                        .service-input();
+                    }
+
+                    .service-content {
+                        font-size: 1.6rem;
+                        font-family: inherit;
+                        color: inherit;
+                        .service-input();
+                    }
+
+                    .pricing-content {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 0.8rem;
+
+                        input {
+                            .service-input();
+                            font-size: inherit;
+                            font-family: inherit;
+                            color: inherit;
+                            font-weight: inherit;
+                            width: 9.6rem;
+                            text-align: left;
+
+                            &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+                                appearance: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                margin-left: auto;
+            }
+        }
+    }
+
+    .section-schedule {
+        padding: 12.8rem 4.8rem;
+
+        .section-appointment {
+            padding: 0;
+            padding-bottom: 9.6rem;
+
+            .appointment-table {
+                grid-row: span 2;
+            }
+
+            .appointment-form-container {
+                justify-content: start;
+            }
+        }
+
+        .appointments-card {
+            .card(@primary-100, @primary-800, @primary-1200, @neutral-900);
+
+            padding: 3.2rem;
+
+            display: flex;
+            flex-direction: column;
+            gap: 2.4rem;
+            max-height: 64rem;
+            overflow: auto;
+
+            .appointment {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 1.6rem;
+
+                .appointment-data {
+                    .appointment-phone {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.8rem;
+
+                        .icon {
+                            font-size: 2.4rem;
+                        }
+                    }
+
+                    .appointment-name {
+                        .title();
+
+                        font-size: 2.4rem;
+                        margin-bottom: 0.4rem;
+                    }
+                }
+
+                .appointment-time {
+                    display: flex;
+                    gap: 0.8rem;
+                    text-align: right;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: @primary-900;
+
+                    justify-content: space-between;
+
+                    .appointment-date, .appointment-hour {
+                        flex-grow: 1;
+                    }
+                }
+            }
+        }
+
+        .section-cancel {
+            padding: 0;
+            min-height: 0;
+            
+            .cancel-card {
+                height: 100%;
+            }
+        }
+
+        .appointments {
+            padding-bottom: 12.8rem;
+        }
+
+        .change-schedule {
+            .schedule-card {
+                .card(@primary-100, @primary-800, @primary-1200, @neutral-900);
+                padding: 3.2rem;
+                margin-bottom: 4.8rem;
+
+                .date-input-container {
+                    display: flex;
+                    gap: 2.4rem;
+                    margin-bottom: 3.2rem;
+
+                    .date-input {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.4rem;
+                        width: 50%;
+                        position: relative;
+
+                        cursor: pointer;
+                    
+                        label {
+                            font-size: 1.4rem;
+                            transition: .2s;
+                        }
+                    
+                        .input {
+                            border-radius: 1rem;
+                            border: solid 0.1rem @neutral-800;
+                            padding: 1.6rem;
+                            color: @neutral-900;
+                            transition: .2s;
+                            font-size: 1.6rem;
+
+                            display: flex;
+                            align-items: center;
+                            gap: 0.8rem;
+
+                            .date-icon {
+                                width: 2.4rem;
+                                height: 2.4rem;
+                            }
+                        }
+
+                    
+                        &:hover {
+                            label {
+                                color: @primary-800;
+                            }
+                    
+                            .input {
+                                border: solid 0.1rem @primary-800;
+                                color: @primary-800;
+                            }
+
+                            .date-icon {
+                                color: @primary-900;
+                            }
+                        }
+                    }
+                }
+
+                .title {
+                    color: @primary-1200;
+                    margin-bottom: 0.8rem;
+                }
+
+                .form-grid {
+                    display: grid;
+                    grid-template-columns: 3fr 1fr;
+                    gap: 4.8rem;
+                    margin-bottom: 3.2rem;
+
+                    .weekdays {
+                        .weekdays-container {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1.6rem;
+
+                            .checkbox-container {
+                                display: flex;
+                                align-items: center;
+                                gap: 0.8rem;
+
+                                font-size: 1.6rem;
+
+                                input {
+                                    width: 1.6rem;
+                                    height: 1.6rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .intervals {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3.2rem;
+
+                    .interval {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .interval-period {
+                            .title();
+                        }
+
+                        .interval-text {
+                            font-size: 1.6rem;
+                            margin-bottom: 0.8rem;
+
+                            span {
+                                font-size: 1.8rem;
+                                font-weight: bolder;
+                            }
+                        }
+
+                        .interval-icon {
+                            color: @primary-1200;
+                            width: 3.2rem;
+                            height: 3.2rem;
+                            cursor: pointer;
+                            transition: .2s;
+
+                            &:hover {
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.delete-overlay {
+    .screen-overlay();
+    padding: 12.8rem @2colIn;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.delete-card {
+    .card(@primary-100, @primary-800, @primary-1200, @neutral-900);
+    padding: 3.2rem;
+    text-align: center;
+    font-size: 1.6rem;
+
+    .text {
+        line-height: 2.4rem;
+
+        &.period {
+            font-weight: bold;
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    .btn-box {
+        display: flex;
+        gap: 0.8rem;
+        justify-content: center;
+    }
+}

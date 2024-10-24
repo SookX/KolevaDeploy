@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+
+:root {
+    // LAYOUT GRID
+    --grid-padding: 9.6rem;
+    --grid-gutter: 2.4rem;
+    --grid-columns: 12;
+    --grid-column-width: calc(calc(100vw - calc(calc(var(--grid-columns) - 1) * var(--grid-gutter)) - calc(var(--grid-padding) * 2)) / var(--grid-columns));
+
+
+    // FONT SIZES
+    --h1: 6.4rem;
+    --h2: 4.8rem;
+    --h3: 3.2rem;
+    --h4: 2.4rem;
+
+    --p1: 1.6rem;
+    --p2: 1.4rem;
+    --p3: 1.2rem;
+}
+
+
+
+// FONTS
+@font-primary: "Comfortaa", sans-serif;
+@font-secondary: "Rubik", sans-serif;
+
+
+
+// SPACING
+@0colIn: var(--grid-padding);
+@1colIn: calc(var(--grid-padding) + var(--grid-column-width) + var(--grid-gutter));
+@2colIn: calc(var(--grid-padding) + calc(calc(var(--grid-column-width) + var(--grid-gutter)) * 2));
+@3colIn: calc(var(--grid-padding) + calc(calc(var(--grid-column-width) + var(--grid-gutter)) * 3));
+@4colIn: calc(var(--grid-padding) + calc(calc(var(--grid-column-width) + var(--grid-gutter)) * 4));
+@5colIn: calc(var(--grid-padding) + calc(calc(var(--grid-column-width) + var(--grid-gutter)) * 5));
+
+
+
+// COLORS
+@primary-1800: #021906;
+@primary-1600: #04310C;
+@primary-1500: #053E10;
+@primary-1200: #086219;
+@primary: #0A7B1F;
+@primary-900: #238835;
+@primary-800: #3B954C;
+@primary-700: #54A362;
+@primary-600: #6CB079;
+@primary-500: #85BD8F;
+@primary-400: #9DCAA5;
+@primary-300: #B6D7BC;
+@primary-200: #CEE5D2;
+@primary-100: #E7F2E9;
+
+
+@secondary-1200: #520A0C;
+@secondary-800: #9C3334;
+@secondary-700: #BB5959;
+@secondary-100: #FBE2E2;
+
+
+@neutral: #212A23;
+@neutral-900: desaturate(lighten(@neutral, 20%), 20%);
+@neutral-800: desaturate(lighten(@neutral, 30%), 30%);
+@neutral-700: desaturate(lighten(@neutral, 40%), 40%);
+@neutral-600: desaturate(lighten(@neutral, 50%), 50%);
+@neutral-500: desaturate(lighten(@neutral, 60%), 60%);
