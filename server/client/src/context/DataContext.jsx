@@ -50,7 +50,7 @@ const DataProvider = ({ children }) => {
 
     // Holds the data for the site
     const [name, setName] = useState('Д-р Калина Колева, д.м. (PhD)')
-    const [phone, setPhone] = useState('0888 888 888')
+    const [phone, setPhone] = useState('0877 202 032')
     const [email, setEmail] = useState('drkalinakoleva@gmail.com')
     const [address, setAddress] = useState('ул. Божко Божилов 1, ет. 2, Ботевград')
 
