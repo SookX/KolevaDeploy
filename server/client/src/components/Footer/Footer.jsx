@@ -17,7 +17,7 @@ const Footer = () => {
 
                 <div className="footer-left-content">
                     <h3 className='footer-title'>{name}</h3>
-                    <p className="footer-left-text">Кабинетът работи с <span>НЗОК</span>. <span>Платен</span> прием в един от дните.</p>
+                    <p className="footer-left-text">Кабинетът роботи с <span>НЗОК</span> и <span>платен</span> прием.</p>
                     <p className="footer-copyright">Copyright ©{new Date().getFullYear()}</p>
                 </div>
             </div>

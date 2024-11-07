@@ -73,7 +73,7 @@ const Form = ({ selectedDate, selectedHour }) => {
             }
 
             <h2 className="appointment-title">Запазете си час!</h2>
-            <p className="appointment-note">*Прегледи по <span>НЗОК</span> в понеделник, вторник и сряда. В петък приемът е <span>платен</span>. Моля изберете час от таблицата и попълнете данните си.</p>
+            <p className="appointment-note">*Кабинетът роботи с <span>НЗОК</span> и <span>платен</span> прием.</p>
             <p className="appointment-doctor">Час за: {name}</p>
 
             {
