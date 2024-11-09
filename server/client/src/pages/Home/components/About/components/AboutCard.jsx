@@ -23,8 +23,6 @@ const AboutCard = () => {
                 method: 'get'
             })
 
-            console.log(response)
-
             if(response.status == 200) {
                 setSpecialties(response.data.data.qualifications)
             }
