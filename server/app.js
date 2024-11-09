@@ -30,7 +30,6 @@ app.use(express.static(path.join(__dirname, '/client/dist')))
 if(process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'))
 }
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 
 app.use('/api/appointments', appointmentRouter);
