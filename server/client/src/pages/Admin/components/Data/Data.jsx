@@ -92,6 +92,8 @@ const Data = () => {
             url: `/service/qualification/${id}`
         })
 
+        console.log(response)
+
         if(response.status == 204) setCurrentSpecialities(newSpecialties)
         else setSpecialtyError('Нещо се обърка. Опитай пак.')
 
@@ -111,6 +113,8 @@ const Data = () => {
                 name: `Специалност ${currentSpecialities.length + 1}`
             }
         })
+
+        console.log(response)
 
         if(response.status == 201) fetchSpecialties()
         else setSpecialtyError('Нещо се обърка. Опитай пак.')
@@ -135,6 +139,8 @@ const Data = () => {
                 name: selectedSpecialty.name
             }
         })
+        
+        console.log(response)
 
         if(response.status == 200) setCurrentSpecialities(newSpecialties)
         else setSpecialtyError('Нещо се обърка. Опитай пак.')

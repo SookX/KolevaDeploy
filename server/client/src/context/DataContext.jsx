@@ -16,7 +16,7 @@ const DataProvider = ({ children }) => {
 
 
     // Sets the url for the backend server
-    axios.defaults.baseURL = 'https://kolevakardiolog.org/api'
+    axios.defaults.baseURL = 'https://kalina-koleva.onrender.com/api'
 
 
 
