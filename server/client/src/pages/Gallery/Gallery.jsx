@@ -4,10 +4,11 @@ import OpenPhoto from './OpenPhoto'
 import gallery1 from '../../img/gallery1.jpg'
 import gallery2 from '../../img/gallery2.jpg'
 import gallery3 from '../../img/gallery3.jpg'
+import gallery4 from '../../img/gallery4.jpg'
 
 const Gallery = () => {
     // Holds the state for the photos
-    const photos = [gallery1, gallery2, gallery3]
+    const photos = [gallery1, gallery2, gallery3, gallery4]
     const [selectedPhoto, setSelectedPhoto] = useState(false)
 
 
