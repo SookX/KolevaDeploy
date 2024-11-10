@@ -6,7 +6,7 @@ import OpenPhoto from './OpenPhoto'
 
 const Gallery = () => {
     // Gets global data from the context
-    const { crud, access } = useContext(DataContext)
+    const { crud, access, url } = useContext(DataContext)
 
 
 
@@ -133,9 +133,9 @@ const Gallery = () => {
                         <div className='grid-photo-container'>
                             <img
                                 key={i}
-                                src={`http://localhost:5000/${photo.image}`}
+                                src={`${url}/${photo.image}`}
                                 className='grid-photo'
-                                onClick={() => setSelectedPhoto(`http://localhost:5000/${photo.image}`)}
+                                onClick={() => setSelectedPhoto(`${url}/${photo.image}`)}
                             />
 
                             {

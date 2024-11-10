@@ -16,7 +16,8 @@ const DataProvider = ({ children }) => {
 
 
     // Sets the url for the backend server
-    axios.defaults.baseURL = 'https://kalina-koleva.onrender.com/api'
+    const url = 'https://kalina-koleva.onrender.com'
+    axios.defaults.baseURL = `${url}/api`
 
 
 
@@ -60,7 +61,8 @@ const DataProvider = ({ children }) => {
         <DataContext.Provider value={{
             navigate,
             crud, access, setAccess,
-            name, phone, email, address
+            name, phone, email, address,
+            url
         }}>
             { children }
         </DataContext.Provider>
