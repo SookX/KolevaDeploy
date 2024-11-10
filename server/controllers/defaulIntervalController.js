@@ -94,8 +94,13 @@ exports.getDays = catchAsync(async(req, res, next) => {
             }
         } else {
             const keys = Object.keys(allData).filter(key => key.startsWith(dateString));
-            const filteredData = Object.entries(allData).filter(([key]) => keys.includes(key));
+            const filteredData = Object.entries(allData)
+                .filter(([key, value]) => keys.includes(key) && value.length > 0);
+                    
             data = Object.fromEntries(filteredData);
+                    
+            
+
         }
         
 
