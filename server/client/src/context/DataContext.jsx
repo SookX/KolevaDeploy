@@ -15,8 +15,18 @@ const DataProvider = ({ children }) => {
 
 
 
+    // Removes the tokens
+    const handleLogout = () => {
+        console.log('you logged out')
+        localStorage.removeItem('access')
+        setAccess(null)
+    }
+
+
+
     // Sets the url for the backend server
     const url = 'https://kalina-koleva.onrender.com'
+    // const url = 'http://localhost:5000'
     axios.defaults.baseURL = `${url}/api`
 
 
@@ -41,8 +51,16 @@ const DataProvider = ({ children }) => {
                 else response = await axios[method](url, config)
             }
 
-            if(response) return response
+            if(response) {
+                return response
+            }
         } catch(err) {
+            if(err.status == 500) {
+                if(err.response.data.message === "invalid token") {
+                    handleLogout()
+                    navigate('/adminLogin')
+                }
+            }
             return err
         }
     }
@@ -62,7 +80,8 @@ const DataProvider = ({ children }) => {
             navigate,
             crud, access, setAccess,
             name, phone, email, address,
-            url
+            url,
+            handleLogout
         }}>
             { children }
         </DataContext.Provider>

@@ -6,7 +6,7 @@ import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons
 
 const Admin = () => {
     // Gets global data from the context
-    const { access, setAccess, navigate } = useContext(DataContext)
+    const { access, handleLogout, navigate } = useContext(DataContext)
 
     
 
@@ -14,14 +14,6 @@ const Admin = () => {
     useEffect(() => {
         if(!access) navigate('/adminLogin')
     }, [access])
-
-
-
-    // Removes the tokens
-    const handleLogout = () => {
-        localStorage.removeItem('access')
-        setAccess(null)
-    }
 
 
 
