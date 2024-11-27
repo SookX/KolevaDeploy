@@ -39,6 +39,7 @@ const Contacts = () => {
                                 </div>
 
                                 <div className="contact-content">{phone}</div>
+                                <div className="contact-content">Записване всеки делничен ден от 10ч. до 13ч.</div>
                             </div>
 
                             <div className="contact">
