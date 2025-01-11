@@ -3,6 +3,7 @@ import article1 from '../../../../../img/article1.jpg'
 import article2 from '../../../../../img/article2.jpg'
 import article3 from '../../../../../img/article3.jpg'
 import article4 from '../../../../../img/article4.jpg'
+import article5 from '../../../../../img/article5.jpg'
 import SectionHeading from "../../../../../components/SectionHeading/SectionHeading"
 
 const Articles = () => {
@@ -42,6 +43,16 @@ const Articles = () => {
                     website='Вестник Правешки глас'
                     link='https://www.facebook.com/pravets.news/posts/pfbid032B4BGezVGfJeKWJu8wdTaiac87GG8Vn6dcz8HDZ2XCredLcg6SFemnoJRJEpqBxVl'
                     image={article4}
+                />
+            </div>
+
+            <div className="articles">
+                <Article
+                    title='"Оптимизмът и социалната ангажираност доказано подобряват сърдечно-съдовото здраве."'
+                    text={`Кардиологът д-р Калина Колева акцентира върху профилактиката на сърдечно-съдовите заболявания и основните рискови фактори.`}
+                    website='balkanec.bg'
+                    link='https://balkanec.bg/optimizmat-i-sotsialnata-angazhiranost-dokazano-podobryavat-sardechno-sadovoto-zdrave-d-r-kalina-koleva-kardiolog-video-66657.html'
+                    image={article5}
                 />
             </div>
         </div>
