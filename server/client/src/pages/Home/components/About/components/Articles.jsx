@@ -4,6 +4,7 @@ import article2 from '../../../../../img/article2.jpg'
 import article3 from '../../../../../img/article3.jpg'
 import article4 from '../../../../../img/article4.jpg'
 import article5 from '../../../../../img/article5.jpg'
+import article6 from '../../../../../img/article6.jpg'
 import SectionHeading from "../../../../../components/SectionHeading/SectionHeading"
 
 const Articles = () => {
@@ -53,6 +54,14 @@ const Articles = () => {
                     website='balkanec.bg'
                     link='https://balkanec.bg/optimizmat-i-sotsialnata-angazhiranost-dokazano-podobryavat-sardechno-sadovoto-zdrave-d-r-kalina-koleva-kardiolog-video-66657.html'
                     image={article5}
+                />
+
+                <Article
+                    title='Вредна ли е консумацията на кафе и алкохол за сърцето и съдовете?'
+                    text={`Кафето е една от най-популярните "напитки на удоволствието", както го наричат немците. В един анализ на литературата е научната база данни от 2023г. (PubMed/Medline database) италиански екип установява следните...`}
+                    website='Ботевградски Вести Плюс'
+                    link='https://www.facebook.com/photo.php?fbid=557819733953007&set=pb.100091749549113.-2207520000&type=3&locale=bg_BG'
+                    image={article6}
                 />
             </div>
         </div>
