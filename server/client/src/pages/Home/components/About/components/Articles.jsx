@@ -5,6 +5,7 @@ import article3 from '../../../../../img/article3.jpg'
 import article4 from '../../../../../img/article4.jpg'
 import article5 from '../../../../../img/article5.jpg'
 import article6 from '../../../../../img/article6.jpg'
+import article7 from '../../../../../img/article7.jpg'
 import SectionHeading from "../../../../../components/SectionHeading/SectionHeading"
 
 const Articles = () => {
@@ -62,6 +63,15 @@ const Articles = () => {
                     website='Ботевградски Вести Плюс'
                     link='https://www.facebook.com/photo.php?fbid=557819733953007&set=pb.100091749549113.-2207520000&type=3&locale=bg_BG'
                     image={article6}
+                />
+            </div>
+            <div className="articles">
+                <Article
+                    title='Опасно ли е сърцебиенето след вирусна инфекция?'
+                    text={`Оплакванията по време на и след вирусни инфекции са най-разнообразни и в повечето случаи бенигнени, тоест очаквани и по-скоро безопасни. За съжаление, макар и редки, уврежданията на сърдечният мускул (миокардит) и на...`}
+                    website='Ботевградски Вести Плюс'
+                    link='https://www.facebook.com/photo/?fbid=579694471765533&set=pcb.579694595098854'
+                    image={article7}
                 />
             </div>
         </div>
