@@ -6,6 +6,7 @@ import article4 from '../../../../../img/article4.jpg'
 import article5 from '../../../../../img/article5.jpg'
 import article6 from '../../../../../img/article6.jpg'
 import article7 from '../../../../../img/article7.jpg'
+import article8 from '../../../../../img/article8.jpg'
 import SectionHeading from "../../../../../components/SectionHeading/SectionHeading"
 
 const Articles = () => {
@@ -72,6 +73,13 @@ const Articles = () => {
                     website='Ботевградски Вести Плюс'
                     link='https://www.facebook.com/photo/?fbid=579694471765533&set=pcb.579694595098854'
                     image={article7}
+                />
+                <Article
+                    title='За първи път в Ботевград има практика лекар, със специалност ангиология'
+                    text={`Д-р Калина Колева има специалности по вътрешни болести и кардиология, а съвсем наскоро завърши и нова специалност - ангиология.`}
+                    website='videos.botevgrad.com'
+                    link='https://videos.botevgrad.com/view/29072/Za-parvi-pat-v-Botevgrad-ima-praktika-lekar-sas-specialnost-angeologiya/'
+                    image={article8}
                 />
             </div>
         </div>
