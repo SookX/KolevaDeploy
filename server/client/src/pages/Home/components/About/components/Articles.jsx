@@ -7,6 +7,7 @@ import article5 from '../../../../../img/article5.jpg'
 import article6 from '../../../../../img/article6.jpg'
 import article7 from '../../../../../img/article7.jpg'
 import article8 from '../../../../../img/article8.jpg'
+import article9 from '../../../../../img/article9.jpg'
 import SectionHeading from "../../../../../components/SectionHeading/SectionHeading"
 
 const Articles = () => {
@@ -80,6 +81,15 @@ const Articles = () => {
                     website='videos.botevgrad.com'
                     link='https://videos.botevgrad.com/view/29072/Za-parvi-pat-v-Botevgrad-ima-praktika-lekar-sas-specialnost-angeologiya/'
                     image={article8}
+                />
+            </div>
+            <div className="articles">
+                <Article
+                    title='Опасни ли са разширените венозни съдове на долните крайници и как се лекуват?'
+                    text={`"Вариците по краката ми създават ли опасност за тромбоза?" Реших да разясня въпроса публично, защото проблемът е масов - засяга всеки трети човек, по-често жените, и зачестява с напредването на възрастта.`}
+                    website='Ботевградски Вести Плюс'
+                    link='https://www.facebook.com/photo/?fbid=639537669114546&set=pb.100091749549113.-2207520000'
+                    image={article9}
                 />
             </div>
         </div>
