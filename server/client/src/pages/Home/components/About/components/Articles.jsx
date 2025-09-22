@@ -8,6 +8,7 @@ import article6 from '../../../../../img/article6.jpg'
 import article7 from '../../../../../img/article7.jpg'
 import article8 from '../../../../../img/article8.jpg'
 import article9 from '../../../../../img/article9.jpg'
+import article10 from '../../../../../img/article10.jpg'
 import SectionHeading from "../../../../../components/SectionHeading/SectionHeading"
 
 const Articles = () => {
@@ -90,6 +91,13 @@ const Articles = () => {
                     website='Ботевградски Вести Плюс'
                     link='https://www.facebook.com/photo/?fbid=639537669114546&set=pb.100091749549113.-2207520000'
                     image={article9}
+                />
+                <Article
+                    title='Кой холестерол е "лош" и защо са важни нивата на липидите в кръвта?'
+                    text={`Така нареченият "лош" холестерол в списъка с вашите кръвни изследвания се означава със съкращението LDL (Low Density Lipoprotein). В по-голямата си част (70-75%) се произвежда в черният дроб нез...`}
+                    website='Ботевградски Вести Плюс'
+                    link='https://www.facebook.com/photo/?fbid=714327748302204&set=pcb.714328098302169'
+                    image={article10}
                 />
             </div>
         </div>
