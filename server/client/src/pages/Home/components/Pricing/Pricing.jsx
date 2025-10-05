@@ -35,6 +35,13 @@ const Pricing = () => {
 
 
 
+    // Converts the price to euro
+    const bgnToEuro = (price) => {
+        return Math.floor(price / 2)
+    }
+
+
+
     return (
         <div id="pricing">
             <SectionHeading title='Ценоразпис' />
@@ -43,7 +50,10 @@ const Pricing = () => {
                     pricing.map((price, i) => (
                         <div className={`pricing-card ${i % 2 == 0 ? 'green' : 'red'}`}>
                             <h4 className="pricing-title title">{price.title}</h4>
-                            <p className="pricing-content">{price.price} лв.</p>
+                            <div>
+                                <p className="pricing-content">{price.price} лв.</p>
+                                <p className="pricing-euro">{bgnToEuro(price.price)} <span className="euro-symbol">€</span></p>
+                            </div>
                         </div>
                     ))
                 }
