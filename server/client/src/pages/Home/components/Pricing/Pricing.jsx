@@ -37,7 +37,7 @@ const Pricing = () => {
 
     // Converts the price to euro
     const bgnToEuro = (price) => {
-        return Math.floor(price / 2)
+        return Math.round(price * 100 / 1.955) / 100
     }
 
 
