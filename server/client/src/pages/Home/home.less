@@ -232,10 +232,16 @@
         }
     }
 
-    .interview {
-        width: 100%;
-        border-radius: 1rem;
+    .interview-container {
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
         padding: 0 @1colIn;
+
+        .interview {
+            width: 100%;
+            border-radius: 1rem;
+        }
     }
 }
 

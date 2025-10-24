@@ -9,6 +9,7 @@ import article7 from '../../../../../img/article7.jpg'
 import article8 from '../../../../../img/article8.jpg'
 import article9 from '../../../../../img/article9.jpg'
 import article10 from '../../../../../img/article10.jpg'
+import article11 from '../../../../../img/article11.jpg'
 import SectionHeading from "../../../../../components/SectionHeading/SectionHeading"
 
 const Articles = () => {
@@ -98,6 +99,15 @@ const Articles = () => {
                     website='Ботевградски Вести Плюс'
                     link='https://www.facebook.com/photo/?fbid=714327748302204&set=pcb.714328098302169'
                     image={article10}
+                />
+            </div>
+            <div className="articles">
+                <Article
+                    title='Кардиологът д-р Калина Колева, д.м. пред „ЗДРАВЕ с Телеграф“: Промените във времето мъчат вените ни'
+                    text={`Болните вени страдат, когато има промяна в атмосферните условия, особено в температурата на въздуха. Това заяви пред „Здраве с Телеграф“ д-р Калина Колева, д.м., която е кардиолог, ангиолог, интернист и спешен лекар в частния си кабинет в Ботевград и в частна клиника в София.`}
+                    website='Телеграф'
+                    link='https://telegraph.bg/telegraphplus/novini/kardiologyt-d-r-kalina-koleva-d.m.-pred-zdrave-s-telegraf-promenite-vyv-vremeto-mychat-venite-ni.-dvizhete-se-minium-po-30-minuti-na-den-s-izpotiavane-474901'
+                    image={article11}
                 />
             </div>
         </div>

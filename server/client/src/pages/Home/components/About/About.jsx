@@ -1,7 +1,7 @@
 import AboutCard from './components/AboutCard';
 import Articles from './components/Articles';
 import Biography from './components/Biography';
-import Interview from './components/Interview';
+import Interviews from './components/Interviews';
 
 const About = () => {
     return (
@@ -9,7 +9,7 @@ const About = () => {
             <AboutCard />
             <Biography />
             <Articles />
-            <Interview />
+            <Interviews />
         </section>
     )
 }

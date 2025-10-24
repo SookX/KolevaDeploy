@@ -1,7 +1,7 @@
-const Interview = () => {
+const Interview = ({ src = "" }) => {
     return (
         <video className="interview" controls={true} name="media">
-            <source src="https://media.botevgrad.com/2/28499/video.mp4" type="video/mp4">
+            <source src={src} type="video/mp4">
             </source>
         </video>
     )
