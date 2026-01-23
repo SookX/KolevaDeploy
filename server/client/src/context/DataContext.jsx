@@ -2,7 +2,7 @@ import axios from "axios";
 import { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export const DataContext = createContext({ })
+export const DataContext = createContext({})
 
 const DataProvider = ({ children }) => {
     // Sends the user to a different page
@@ -25,7 +25,7 @@ const DataProvider = ({ children }) => {
 
 
     // Sets the url for the backend server
-    const url = 'https://kalina-koleva.onrender.com'
+    const url = import.meta.env.VITE_URL || 'https://kalina-koleva.onrender.com'
     // const url = 'http://localhost:5000'
     axios.defaults.baseURL = `${url}/api`
 
@@ -47,16 +47,16 @@ const DataProvider = ({ children }) => {
             if (method.toLowerCase() === 'get') {
                 response = await axios[method](url, config);
             } else {
-                if(body) response = await axios[method](url, body, config);
+                if (body) response = await axios[method](url, body, config);
                 else response = await axios[method](url, config)
             }
 
-            if(response) {
+            if (response) {
                 return response
             }
-        } catch(err) {
-            if(err.status == 500) {
-                if(err.response.data.message === "invalid token") {
+        } catch (err) {
+            if (err.status == 500) {
+                if (err.response.data.message === "invalid token") {
                     handleLogout()
                     navigate('/adminLogin')
                 }
@@ -83,7 +83,7 @@ const DataProvider = ({ children }) => {
             url,
             handleLogout
         }}>
-            { children }
+            {children}
         </DataContext.Provider>
     )
 }

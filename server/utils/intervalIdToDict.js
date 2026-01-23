@@ -29,17 +29,17 @@ const intervalIdToDict = async (startDate, endDate) => {
     const endHour = interval['endHour'];
     const duration = interval['duration'];
     const breakBetweenAppointments = interval['breakBetweenAppointments'];
-    
+
     const changes = await Change.find();
     const appointments = await Appointment.find();
-    
+
     const bookedDates = new Set(appointments.map(appointment => appointment.date.toISOString()));
-    
+
     const datesToWork = new Set();
-    for (let tempDateMillis = startMillis; tempDateMillis <= endMillis; tempDateMillis += 86400000) { 
+    for (let tempDateMillis = startMillis; tempDateMillis <= endMillis; tempDateMillis += 86400000) {
         const tempDate = new Date(tempDateMillis);
         if (daysToWork.has(tempDate.getUTCDay())) {
-            datesToWork.add(tempDateMillis); 
+            datesToWork.add(tempDateMillis);
         }
     }
 
@@ -53,12 +53,12 @@ const intervalIdToDict = async (startDate, endDate) => {
             if (changeDays.has(dayOfWeek)) {
                 const isWorking = change.working;
                 if (isWorking) {
-                    datesToWork.add(tempChangeMillis); 
+                    datesToWork.add(tempChangeMillis);
                 } else {
                     datesToWork.delete(tempChangeMillis);
                 }
             } else {
-                datesToWork.delete(tempChangeMillis); 
+                datesToWork.delete(tempChangeMillis);
             }
         }
     }
@@ -66,32 +66,40 @@ const intervalIdToDict = async (startDate, endDate) => {
     const sortedDates = Array.from(datesToWork).sort((a, b) => a - b);
 
     const changeLookup = {};
-    await Promise.all(sortedDates.map(async (dateMillis) => {
+    for (const dateMillis of sortedDates) {
         const currentWorkDate = new Date(dateMillis);
-        changeLookup[dateMillis] = await findChangeForDate(currentWorkDate);
-    }));
+
+        // Find matching change from the already fetched changes array
+        const matchingChange = changes.find(change => {
+            const start = new Date(change.startDate).getTime();
+            const end = change.endDate ? new Date(change.endDate).getTime() : Infinity;
+            return dateMillis >= start && dateMillis <= end;
+        });
+
+        changeLookup[dateMillis] = matchingChange;
+    }
 
     for (const dateMillis of sortedDates) {
         const currentWorkDate = new Date(dateMillis);
         const changeForDate = changeLookup[dateMillis];
-    
+
         let currentStartHour = startHour;
         let currentEndHour = endHour;
         let currentDuration = duration;
         let currentBreak = breakBetweenAppointments;
-    
+
         if (changeForDate) {
             currentStartHour = changeForDate['startHour'];
             currentEndHour = changeForDate['endHour'];
-            currentDuration = changeForDate['duration'] || duration;  
-            currentBreak = changeForDate['breakBetweenAppointments'] || breakBetweenAppointments; 
+            currentDuration = changeForDate['duration'] || duration;
+            currentBreak = changeForDate['breakBetweenAppointments'] || breakBetweenAppointments;
         }
-    
+
         const date = split(currentWorkDate, currentStartHour, currentEndHour, currentDuration, currentBreak, bookedDates);
         data[currentWorkDate.toISOString().split("T")[0]] = date;
     }
 
-    return data; 
+    return data;
 }
 
 
