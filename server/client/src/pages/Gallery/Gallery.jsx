@@ -5,7 +5,7 @@ import gallery1 from '../../img/gallery1.jpg'
 import gallery2 from '../../img/gallery2.jpg'
 import gallery3 from '../../img/gallery3.jpg'
 import gallery4 from '../../img/gallery4.jpg'
-import gallery5 from '../../img/gallery4.jpg'
+import gallery5 from '../../img/gallery5.jpg'
 
 const Gallery = () => {
     // Holds the state for the photos
