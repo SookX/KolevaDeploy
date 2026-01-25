@@ -10,6 +10,7 @@ import article8 from '../../../../../img/article8.jpg'
 import article9 from '../../../../../img/article9.jpg'
 import article10 from '../../../../../img/article10.jpg'
 import article11 from '../../../../../img/article11.jpg'
+import article12 from '../../../../../img/article12.jpg'
 import SectionHeading from "../../../../../components/SectionHeading/SectionHeading"
 
 const Articles = () => {
@@ -108,6 +109,13 @@ const Articles = () => {
                     website='Телеграф'
                     link='https://telegraph.bg/telegraphplus/novini/kardiologyt-d-r-kalina-koleva-d.m.-pred-zdrave-s-telegraf-promenite-vyv-vremeto-mychat-venite-ni.-dvizhete-se-minium-po-30-minuti-na-den-s-izpotiavane-474901'
                     image={article11}
+                />
+                <Article
+                    title='Българите страдат от пост-Ковид синдром.'
+                    text={`Българи и европейци страдат от пост-Ковид-19 синдром, но или не знаят за това, или подценяват симптомите, които имат. Това заяви пред „Здраве с Телеграф” д-р Калина Колева, д.м., която е кардиолог, ангиолог, интернист и спешен лекар в Ботевград и в София.`}
+                    website='Телеграф'
+                    link='https://telegraph.bg/telegraphplus/novini/bylgarite-stradat-ot-post-kovid-sindrom.-ako-imate-neiasni-bolki-lesna-umora-zaduh-sled-prekarana-infekciia-posetete-lekar-480681'
+                    image={article12}
                 />
             </div>
         </div>

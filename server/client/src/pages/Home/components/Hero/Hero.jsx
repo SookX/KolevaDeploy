@@ -15,7 +15,7 @@ const Hero = () => {
             <div className="hero-textbox">
                 <p className="hero-subheading">{name}</p>
                 <h2 className="hero-heading">Над 20 години грижа за Вашето здраве!</h2>
-                <p className="hero-text">Кардиолог, интернист, спешен лекар, специализант по ангиология (съдова медицина)</p>
+                <p className="hero-text">Кардиолог, интернист, спешен лекар, ангиолог (съдов специалист)</p>
 
                 <div className="hero-btn-box">
                     <HashLink to='/#about' className="btn secondary">Повече за мен</HashLink>
