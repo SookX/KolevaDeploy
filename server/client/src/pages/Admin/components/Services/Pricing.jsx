@@ -196,7 +196,7 @@ const Pricing = () => {
                                     onChange={(e) => handleChangeContent(e, price._id)}
                                     cols={3}
                                 />
-                                <span>лв.</span>
+                                <span>€</span>
                             </p>
                         </div>
                     ))
