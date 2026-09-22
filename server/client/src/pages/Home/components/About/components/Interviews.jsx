@@ -7,6 +7,7 @@ const Interviews = () => {
             <Interview src="https://media.botevgrad.com/2/29403/video.mp4" />
             <Interview src={interview2} />
             <Interview src="https://media.botevgrad.com/2/28499/video.mp4" />
+            <Interview src="https://media.botevgrad.com/3/30066/video.mp4" />
         </div>
     )
 }
