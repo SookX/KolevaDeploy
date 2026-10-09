@@ -11,6 +11,7 @@ import article9 from '../../../../../img/article9.jpg'
 import article10 from '../../../../../img/article10.jpg'
 import article11 from '../../../../../img/article11.jpg'
 import article12 from '../../../../../img/article12.jpg'
+import article13 from '../../../../../img/article13.png'
 import SectionHeading from "../../../../../components/SectionHeading/SectionHeading"
 
 const Articles = () => {
@@ -116,6 +117,15 @@ const Articles = () => {
                     website='Телеграф'
                     link='https://telegraph.bg/telegraphplus/novini/bylgarite-stradat-ot-post-kovid-sindrom.-ako-imate-neiasni-bolki-lesna-umora-zaduh-sled-prekarana-infekciia-posetete-lekar-480681'
                     image={article12}
+                />
+            </div>
+            <div className="articles">
+                <Article
+                    title='Микро- и нанопластмасите увеличават риска от инфаркт и инсулт!'
+                    text={`Ден след Световния ден на сърцето, който отбелязахме на 29 септември, кардиологът, ангиолог, интернист и спешен лекар д-р Калина Колева, д.м., обяснява, че натрупването на тези микро- и наночастици става след консумация от пластмасови съдове и шишета, при вдишване на попаднали микро- и нанопластма...`}
+                    website='Телеграф'
+                    link='https://telegraph.bg/zdrave/novini/mikro-i-nanoplastmasite-uvelichavat-riska-ot-infarkt-i-insult-d-r-kalina-koleva-d.m.-konsumirajte-hrani-bogati-na-fibri-za-da-izhvyrlite-po-goliamata-chast-ot-plastmasite-ot-tialoto-si-506885'
+                    image={article13}
                 />
             </div>
         </div>
